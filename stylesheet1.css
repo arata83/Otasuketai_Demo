@@ -1,0 +1,132 @@
+body{ 
+    background-color:#ffffff;
+    color : #000000;
+    font-size:62.5%;
+  }
+
+  .pic_frame {
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+    margin-left:20px;
+  }
+  .title{
+      text-align: center;
+      color:cornflowerblue;
+  }
+  #contents{
+    min-height:300px;
+    color : #000000;
+    margin-right: auto;
+    margin-left : auto;
+    margin-top: 20px;
+    margin-bottom: 1.5%;
+    background-color: #ffffff;
+    font-size: 1.6em;
+    line-height: 1.5em;
+    border-radius: 15px;
+    text-align:center;
+  }
+  header{
+    width:auto;
+    height: 60px;
+    font-size:2em;
+    text-align : center;
+    margin-bottom: 50px;
+  }
+  h3,h4,h5{
+      margin-top:0px;
+      margin-bottom:0px
+  }
+  .image{
+      width:200px;
+      height:220px;
+      border: 3px;
+      border-color:darkgoldenrod
+      
+  }
+  .menu-btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;   
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: darkslateblue;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    background-color: white;
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: white;
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+}
+.menu-content ul {
+    padding: 300px 10px 0;
+}
+.menu-content ul li {
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 30px 15px 10px 0;
+    position: relative;
+    text-align: center;
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: darkslateblue;
+    transition: all 1.5s;/*アニメーション設定*/
+    opacity: 0;
+}
+#menu-btn-check:checked ~ .menu-content {
+    opacity: 0.8;
+}
