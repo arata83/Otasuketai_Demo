@@ -1,14 +1,13 @@
 .menu-btn {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 30px;
+    right: 30px;
     display: flex;
     height: 60px;
     width: 60px;
     justify-content: center;
     align-items: center;
-    z-index: 90;
-    background-color: #3584bb;
+    z-index: 90;   
 }
 .menu-btn span,
 .menu-btn span:before,
@@ -18,7 +17,7 @@
     height: 3px;
     width: 25px;
     border-radius: 3px;
-    background-color: #ffffff;
+    background-color: darkslateblue;
     position: absolute;
 }
 .menu-btn span:before {
@@ -33,10 +32,12 @@
 #menu-btn-check:checked ~ .menu-btn span::before {
     bottom: 0;
     transform: rotate(45deg);
+    background-color: white;
 }
 #menu-btn-check:checked ~ .menu-btn span::after {
     top: 0;
     transform: rotate(-45deg);
+    background-color: white;
 }
 #menu-btn-check {
     display: none;
@@ -51,33 +52,23 @@
     background-color: #3584bb;
 }
 .menu-content ul {
-    padding: 70px 10px 0;
+    padding: 300px 10px 0;
 }
 .menu-content ul li {
-    border-bottom: solid 1px #ffffff;
     list-style: none;
 }
 .menu-content ul li a {
     display: block;
     width: 100%;
-    font-size: 15px;
+    font-size: 30px;
     box-sizing: border-box;
     color:#ffffff;
     text-decoration: none;
-    padding: 9px 15px 10px 0;
+    padding: 30px 15px 10px 0;
     position: relative;
+    text-align: center;
 }
-.menu-content ul li a::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    border-top: solid 2px #ffffff;
-    border-right: solid 2px #ffffff;
-    transform: rotate(45deg);
-    position: absolute;
-    right: 11px;
-    top: 16px;
-}
+
 .menu-content {
     width: 100%;
     height: 100%;
@@ -85,10 +76,18 @@
     top: 0;
     left: 100%;/*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
-    background-color: #3584bb;
+    background-color: darkslateblue;
     transition: all 0.5s;/*アニメーション設定*/
+    opacity: 0.8;
 }
 #menu-btn-check:checked ~ .menu-content {
     left: 0;/*メニューを画面内へ*/
+}
+.top-title{
+    text-align: center;
+    margin-top: 0px;    
+}
+#title{
+    font-size: 40px;
 }
 
