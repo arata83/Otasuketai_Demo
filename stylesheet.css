@@ -38,3 +38,6 @@
     top: 0;
     transform: rotate(-45deg);
 }
+#menu-btn-check {
+    display: none;
+}
