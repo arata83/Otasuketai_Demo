@@ -74,14 +74,14 @@
     height: 100%;
     position: fixed;
     top: 0;
-    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    left: 0;/*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
     background-color: darkslateblue;
-    transition: all 0.5s;/*アニメーション設定*/
-    opacity: 0.8;
+    transition: all 1.5s;/*アニメーション設定*/
+    opacity: 0;
 }
 #menu-btn-check:checked ~ .menu-content {
-    left: 0;/*メニューを画面内へ*/
+    opacity: 0.8;
 }
 .top-title{
     text-align: center;
